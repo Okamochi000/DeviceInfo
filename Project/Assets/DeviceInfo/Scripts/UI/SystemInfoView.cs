@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -66,28 +66,28 @@ public class SystemInfoView : MonoBehaviour
     }
 
     /// <summary>
-    /// ’ÊMó‹µ‚ğXV‚·‚é
+    /// é€šä¿¡çŠ¶æ³ã‚’æ›´æ–°ã™ã‚‹
     /// </summary>
     private void UpdateNetwork()
     {
         switch (Application.internetReachability)
         {
-            case NetworkReachability.NotReachable: networkText.text = "–¢Ú‘±"; break;
-            case NetworkReachability.ReachableViaCarrierDataNetwork: networkText.text = "ƒLƒƒƒŠƒAÚ‘±"; break;
-            case NetworkReachability.ReachableViaLocalAreaNetwork: networkText.text = "WifiÚ‘±"; break;
+            case NetworkReachability.NotReachable: networkText.text = "æœªæ¥ç¶š"; break;
+            case NetworkReachability.ReachableViaCarrierDataNetwork: networkText.text = "ã‚­ãƒ£ãƒªã‚¢æ¥ç¶š"; break;
+            case NetworkReachability.ReachableViaLocalAreaNetwork: networkText.text = "Wifiæ¥ç¶š"; break;
             default: break;
         }
     }
 
     /// <summary>
-    /// ƒoƒbƒeƒŠ[î•ñ‚ğXV‚·‚é
+    /// ãƒãƒƒãƒ†ãƒªãƒ¼æƒ…å ±ã‚’æ›´æ–°ã™ã‚‹
     /// </summary>
     private void UpdateBattery()
     {
         if (SystemInfo.batteryStatus == BatteryStatus.Unknown)
         {
-            batteryLevelText.text = "æ“¾¸”s";
-            batteryStateText.text = "æ“¾¸”s";
+            batteryLevelText.text = "å–å¾—å¤±æ•—";
+            batteryStateText.text = "å–å¾—å¤±æ•—";
         }
         else
         {
@@ -97,14 +97,14 @@ public class SystemInfoView : MonoBehaviour
             switch (SystemInfo.batteryStatus)
             {
                 case BatteryStatus.Charging:
-                    batteryStateText.text = "[“d’†";
+                    batteryStateText.text = "å……é›»ä¸­";
                     break;
                 case BatteryStatus.Discharging:
                 case BatteryStatus.NotCharging:
-                    batteryStateText.text = "[“d‚µ‚Ä‚¢‚È‚¢";
+                    batteryStateText.text = "å……é›»ã—ã¦ã„ãªã„";
                     break;
                 case BatteryStatus.Full:
-                    batteryStateText.text = "ƒtƒ‹[“d";
+                    batteryStateText.text = "ãƒ•ãƒ«å……é›»";
                     break;
                 default: break;
             }
@@ -112,7 +112,7 @@ public class SystemInfoView : MonoBehaviour
     }
 
     /// <summary>
-    /// ‰ğ‘œ“xî•ñ‚ğXV‚·‚é
+    /// è§£åƒåº¦æƒ…å ±ã‚’æ›´æ–°ã™ã‚‹
     /// </summary>
     private void UpdateResolutionText()
     {
@@ -125,7 +125,7 @@ public class SystemInfoView : MonoBehaviour
     }
 
     /// <summary>
-    /// ƒI[ƒfƒBƒIİ’è
+    /// ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªè¨­å®š
     /// </summary>
     /// <param name="deviceWasChanged"></param>
     void OnAudioConfigurationChanged(bool deviceWasChanged)
